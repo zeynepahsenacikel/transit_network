@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LaunchPlans>
+
+    <LaunchPlan>
+        <PlanName>Orbiter Alpha Launch Prep</PlanName>
+        <Operations>
+
+            <Operation>
+                <Code>0</Code>
+                <Label>Activate ground support units</Label>
+                <ExecutionTime>2</ExecutionTime>
+                <BlockedBy/>
+            </Operation>
+
+            <Operation>
+                <Code>1</Code>
+                <Label>Deploy communication arrays</Label>
+                <ExecutionTime>1</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>0</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>2</Code>
+                <Label>Initialize telemetry systems</Label>
+                <ExecutionTime>1</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>1</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>3</Code>
+                <Label>Mission clearance approval</Label>
+                <ExecutionTime>1</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>2</RequiresOperation>
+                    <RequiresOperation>4</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>4</Code>
+                <Label>Payload configuration</Label>
+                <ExecutionTime>1</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>0</RequiresOperation>
+                    <RequiresOperation>1</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>5</Code>
+                <Label>Launch signal broadcast</Label>
+                <ExecutionTime>1</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>3</RequiresOperation>
+                    <RequiresOperation>4</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+        </Operations>
+    </LaunchPlan>
+
+    <LaunchPlan>
+        <PlanName>Deep Space Probe Deployment</PlanName>
+        <Operations>
+
+            <Operation>
+                <Code>0</Code>
+                <Label>Load propulsion systems</Label>
+                <ExecutionTime>1</ExecutionTime>
+                <BlockedBy/>
+            </Operation>
+
+            <Operation>
+                <Code>1</Code>
+                <Label>Calibrate navigation module</Label>
+                <ExecutionTime>6</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>0</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>2</Code>
+                <Label>Initial system integration</Label>
+                <ExecutionTime>12</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>0</RequiresOperation>
+                    <RequiresOperation>1</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>3</Code>
+                <Label>Hardware assembly</Label>
+                <ExecutionTime>12</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>2</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>4</Code>
+                <Label>Subsystem testing</Label>
+                <ExecutionTime>6</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>1</RequiresOperation>
+                    <RequiresOperation>3</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>5</Code>
+                <Label>Safety inspection</Label>
+                <ExecutionTime>3</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>3</RequiresOperation>
+                    <RequiresOperation>4</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>6</Code>
+                <Label>Final systems validation</Label>
+                <ExecutionTime>4</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>1</RequiresOperation>
+                    <RequiresOperation>3</RequiresOperation>
+                    <RequiresOperation>4</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>7</Code>
+                <Label>Deployment sequence initiation</Label>
+                <ExecutionTime>4</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>6</RequiresOperation>
+                    <RequiresOperation>3</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+        </Operations>
+    </LaunchPlan>
+
+    <LaunchPlan>
+        <PlanName>Interplanetary Mission Assembly</PlanName>
+        <Operations>
+
+            <Operation>
+                <Code>0</Code>
+                <Label>Mission design planning</Label>
+                <ExecutionTime>2</ExecutionTime>
+                <BlockedBy/>
+            </Operation>
+
+            <Operation>
+                <Code>1</Code>
+                <Label>Structure construction</Label>
+                <ExecutionTime>20</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>0</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>2</Code>
+                <Label>Subsystem integration</Label>
+                <ExecutionTime>8</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>0</RequiresOperation>
+                    <RequiresOperation>1</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>3</Code>
+                <Label>Systems diagnostics</Label>
+                <ExecutionTime>3</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>0</RequiresOperation>
+                    <RequiresOperation>2</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>4</Code>
+                <Label>Final integration test</Label>
+                <ExecutionTime>2</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>1</RequiresOperation>
+                    <RequiresOperation>3</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+            <Operation>
+                <Code>5</Code>
+                <Label>Mission launch execution</Label>
+                <ExecutionTime>10</ExecutionTime>
+                <BlockedBy>
+                    <RequiresOperation>4</RequiresOperation>
+                </BlockedBy>
+            </Operation>
+
+        </Operations>
+    </LaunchPlan>
+
+</LaunchPlans>
